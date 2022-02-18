@@ -1,6 +1,6 @@
 \name{map_sae}
 \alias{map_sae}
-\title{Map the disagregated estimates and the coefficient of variation.}
+\title{Map the disagregated estimates and the coefficients of variation.}
 \description{
 \code{map_sae} produces geographical maps for the small area estimates or the direct estimaes among with their CVs.
 }
@@ -9,8 +9,8 @@ map_sae(shapefile,data,area,indicators,breaks=FALSE,main=FALSE,output_data=FALSE
 
 }
 \arguments{
-\item{shapefile}{object of class \code{sf} and \code{data.frame} as defined by the \code{sf} package containing shapefile informations, e.g. \code{\link{SAEval_example}}. See also 'Details'.}
- \item{data}{data frame containing for the area of interest the information to be visualized.}
+\item{shapefile}{object of class \code{sf} and \code{data.frame} as defined by the \code{sf} package containing shapefile informations, e.g. \code{\link{sa_shp}}. See also 'Details'.}
+ \item{data}{data frame containing for the area of interest the information to be visualized,  e.g. \code{\link{SAEval_example}}.}
  \item{area}{formula identifing the area of interest.}
   \item{indicators}{formula identifing the variables to be visualized.}
   \item{breaks}{list containing the end points for each indcator of interest (default=FALSE).}
@@ -20,12 +20,13 @@ map_sae(shapefile,data,area,indicators,breaks=FALSE,main=FALSE,output_data=FALSE
  
 \details{
 \code{shapefile} object can be created with the \code{sf} package using the function \code{st_sf}.
+If \code{main} is equal to \code{TRUE} the name of the indicator will be used as main title of the map.
 When \code{output_data} is equal to \code{TRUE} a map data object is returned so can be easaly maneged using \code{ggplot} for a better graphical personalizzation. 
 }
 
 \value{
 
-Returns maps, and, if selected, a data.frame containing the mapdata and indicators of interest.
+Returns maps, and, if selected, a data.frame containing the mapdata enriched with the indicators of interest.
 
 }
 \author{

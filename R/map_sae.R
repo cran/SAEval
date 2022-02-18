@@ -8,7 +8,9 @@ map_sae<-function(shapefile,data,area,indicators,breaks=FALSE,main=FALSE,output_
   
   b<-ifelse(class(breaks)=="list",TRUE,FALSE)
   
-  map <- merge(shapefile, data, by = area.name)
+  tryCatch(map <- merge(shapefile, data, by = area.name),
+           error = function (e) {print(paste("Error:",area, "argument is not present in both shapefile and data input"))})
+  
   
   for (i in indicators.name)
   {

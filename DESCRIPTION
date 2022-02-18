@@ -2,7 +2,7 @@ Package: SAEval
 Type: Package
 Title: Small Area Estimation Evaluation
 Description: Allows users to produce diagnostic procedures and graphic tools for the evaluation of Small Area estimators.
-Version: 0.1.0
+Version: 0.1.1
 Depends: R (>= 3.5.0), lmtest , car
 NeedsCompilation: no
 Authors@R: 
@@ -16,6 +16,6 @@ Imports: stats,ggplot2,ggspatial,grid
 License: EUPL
 Encoding: UTF-8
 BuildResaveData: best
-Packaged: 2021-12-06 14:05:11 UTC; UTENTE
+Packaged: 2022-02-18 10:16:32 UTC; UTENTE
 Repository: CRAN
-Date/Publication: 2021-12-06 16:30:02 UTC
+Date/Publication: 2022-02-18 10:30:02 UTC

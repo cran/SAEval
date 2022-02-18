@@ -1,4 +1,4 @@
-\name{SAEval_example_shp}
+\name{sa_shp}
 \Rdversion{1.0}
 \alias{sa_shp}
 \docType{data}
