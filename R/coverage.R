@@ -9,18 +9,10 @@ sae.name<-all.vars(sae)
 mse.sae.name<-all.vars(mse.sae)
 
 data.s<-data[,c(dir.name,v.dir.name,sae.name,mse.sae.name)]
-#data.s[,dir.name]<-ifelse(is.na(data.s[,dir.name]),0,data.s[,dir.name])
-#estimates2<-data.s[data.s[,dir.name]>0,]
-estimates2<-data.s[!is.na(data.s[,dir.name]),]
-estimates2<-data.s[!is.na(data.s[,v.dir.name]),]
+estimates2 <- data.s[!is.na(data.s[, v.dir.name])&data.s[, v.dir.name]!=0, ]
 
 
 output<-list(0)
-# sovrap<-numeric(0)
-# sovrap_alt<-numeric(0)
-# f_sovrap<-numeric(0)
-# output3<-numeric(0)
-# c<-list(0)
 a<-"Accepted the H0: The overlap is 95%"
 b<-"Rejected the H0: The overlap is 95%"
 

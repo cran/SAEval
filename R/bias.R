@@ -23,7 +23,7 @@ bias <- function (data,dir,sae,scatterplot=FALSE)
   b<-"Accept the H0: b0=0 and b1=1"
   c<-"Reject the H0: residual area homoskedastic. "
   d<-"Accept the H0: residual area homoskedastic"
-  sae.names.t<-c()
+  sae.name.t<-c()
   
   for(i in sae.name)
     
@@ -75,7 +75,8 @@ bias <- function (data,dir,sae,scatterplot=FALSE)
       
       gq_Test[i]<-ifelse(testz$p.value<0.05,c,d)
       
-      sae.name.t<-paste("sqrt_",i,sep="")
+      sae.name.tt<-paste("sqrt_",i,sep="")
+      sae.name.t<-c(sae.name.t,sae.name.tt)
     }
     if (scatterplot!=FALSE)
     {
@@ -84,12 +85,20 @@ bias <- function (data,dir,sae,scatterplot=FALSE)
   }
   
   output1<-data.frame(methods=sae.name,b0,b1,R2,F,GQ_Test)
-  output2<-data.frame(methods=sae.name.t,B0,B1,r2,f,gq_Test)
-  colnames(output2) <-c("methods","b0","b1","R2","F","GQ_Test")
   rownames(output1) <- NULL
-  rownames(output2) <- NULL
+   
+   all.output<-list(output1=output1)
   
-  all.output<-list(output1=output1,output2=output2)
+                    if (test$p.value<0.05)
+  {
+    output2<-data.frame(methods=sae.name.t,B0,B1,r2,f,gq_Test)
+    colnames(output2) <-c("methods","b0","b1","R2","F","GQ_Test")
+    rownames(output2) <- NULL
+    all.output<-list(all.output,output2=output2)
+  }
+  
+
+                   
   
 }
 

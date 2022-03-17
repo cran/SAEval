@@ -1,9 +1,9 @@
-5b8c7fb913d03cf721531eb76438d635 *DESCRIPTION
+4340eb306c09e1bd907b37b913a08336 *DESCRIPTION
 f8bfb8778e6fb9bb9e26aa24b6291c5e *NAMESPACE
-318801382e979857f0a89bab73c86b42 *R/bias.R
+0f4aa9ed285bd7e53c7f6f06fd3f9f74 *R/bias.R
 c9647375018bffc14f5b88d4e798ae17 *R/calibration.R
-8de9df5805d1f4d486f777cea0bbadc8 *R/coverage.R
-5260979973e31f80c4716048fa392c33 *R/cv_table.R
+8f813421f4f723ea982e39403757c62f *R/coverage.R
+0593ca2ac4ad2ca0c08bf2dfb4c471c4 *R/cv_table.R
 a69660d7e9bad6e55dd2592214ba4589 *R/gof.R
 785dcca9117a71c72cec2ac565c32aa5 *R/map_sae.R
 1e9c028190b8e808e4c56aea2e7d823f *data/SAEval_example.rda
@@ -16,5 +16,5 @@ f7c865ecb59d39400491e07c2558e55d *man/calibration.Rd
 923f048b5312a6bdb4c7996baf10ee3d *man/coverage.Rd
 bdc9d84bf73b9130eee0be2b96f40d53 *man/cv_table.Rd
 57cc21727d96636b92bdd31d6505201f *man/gof.Rd
-66f1f8f5a5df8c5934d85ba3273d3e5e *man/map_sae.Rd
+db2c813bc27ed5003cabae9f725eeb91 *man/map_sae.Rd
 119dbb221293d67df5136f4d9bb02e67 *man/sa_shp.Rd

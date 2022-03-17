@@ -19,7 +19,7 @@ map_sae(shapefile,data,area,indicators,breaks=FALSE,main=FALSE,output_data=FALSE
  }
  
 \details{
-\code{shapefile} object can be created with the \code{sf} package using the function \code{st_sf}.
+\code{shapefile} object can be created with the \code{sf} package using the function \code{st_read}.
 If \code{main} is equal to \code{TRUE} the name of the indicator will be used as main title of the map.
 When \code{output_data} is equal to \code{TRUE} a map data object is returned so can be easaly maneged using \code{ggplot} for a better graphical personalizzation. 
 }
@@ -44,13 +44,13 @@ data(SAEval_example);data(SAEval_example_shp)
 SAEval_example$cv_d<-sqrt(SAEval_example$mse_d)/SAEval_example$y_d
 
 SAEval_example$cv_sa<-sqrt(SAEval_example$mse_sa)/SAEval_example$y_syna
-
+\donttest{
 # Without using breaks
 map_sae(shapefile=sa_shp,data=SAEval_example,area=~sa,indicators=~y_d+cv_d+y_syna+cv_sa,main=TRUE)
 
 # Using breaks
 map_sae(shapefile=sa_shp,data=SAEval_example,area=~sa,indicators=~y_d+cv_d+y_syna+cv_sa,
         breaks=list(seq(0,31000,3000),seq(0,1.5,0.15),seq(0,31000,3000),seq(0,1.5,0.15)),main=TRUE)
-
+}
 
 }
