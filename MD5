@@ -1,6 +1,6 @@
-4340eb306c09e1bd907b37b913a08336 *DESCRIPTION
+d0a83ecbce6a243c0d9fcf42b10fb64f *DESCRIPTION
 f8bfb8778e6fb9bb9e26aa24b6291c5e *NAMESPACE
-0f4aa9ed285bd7e53c7f6f06fd3f9f74 *R/bias.R
+797bbfcd1b90bbb060cd5538204c2691 *R/bias.R
 c9647375018bffc14f5b88d4e798ae17 *R/calibration.R
 8f813421f4f723ea982e39403757c62f *R/coverage.R
 0593ca2ac4ad2ca0c08bf2dfb4c471c4 *R/cv_table.R
@@ -11,7 +11,7 @@ a69660d7e9bad6e55dd2592214ba4589 *R/gof.R
 091ea206d2e53531c3d31ebce1be6931 *data/datalist
 d5e1db416f24cec3ea4035a542ca3051 *man/SAEval-package.Rd
 e552eff3def063a0ec107b1a9ca562af *man/SAEval_example.Rd
-73bef1c05ebd537cd97b6e5d582e1e40 *man/bias.Rd
+232719ccec6e2e8b0f198af411ba96e3 *man/bias.Rd
 f7c865ecb59d39400491e07c2558e55d *man/calibration.Rd
 923f048b5312a6bdb4c7996baf10ee3d *man/coverage.Rd
 bdc9d84bf73b9130eee0be2b96f40d53 *man/cv_table.Rd

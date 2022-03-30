@@ -1,11 +1,10 @@
 
-bias <- function (data,dir,sae,scatterplot=FALSE)
+bias <- function (data,dir,sae,scatterplot=FALSE,main=NULL)
   
 {
   dir.name<-all.vars(dir)
   sae.name<-all.vars(sae)
   data.s<-data[,c(dir.name,sae.name)]
-  #data.s[,dir.name]<-ifelse(is.na(data.s[,dir.name]),0,data.s[,dir.name])
   data.s<-data.s[!is.na(data.s[,dir.name]),]
     
   B0<-numeric(0)
@@ -35,7 +34,9 @@ bias <- function (data,dir,sae,scatterplot=FALSE)
     if (scatterplot!=FALSE)
     {
       dev.new()
-    plot(data.s[,dir.name]~data.s[,i],xlab=i,ylab="direct",main=paste("direct vs", i, sep=" "))
+      tit<-ifelse(is.null(main),paste("direct vs", i, sep=" "),
+                  main)
+    plot(data.s[,dir.name]~data.s[,i],xlab=i,ylab="direct",main=tit)
     abline(lm(data.s[,dir.name]~data.s[,i]))
     abline(c(0,1),col="red")
     legend("topleft", legend=c("Bisector", "Regression line"),
@@ -59,7 +60,9 @@ bias <- function (data,dir,sae,scatterplot=FALSE)
       if (scatterplot!=FALSE)
       {
         dev.new()
-      plot(sqrt(data.s[,dir.name])~sqrt(data.s[,i]),xlab=i,ylab="sqrt-direct",main=paste("sqrt-direct vs sqrt-",i, sep=""))
+        tit<-ifelse(is.null(main),paste("sqrt-direct vs sqrt-",i, sep=""),
+                    paste(main,"- sqrt transformation",sep=" "))
+      plot(sqrt(data.s[,dir.name])~sqrt(data.s[,i]),xlab=i,ylab="sqrt-direct",main=tit)
       abline(lm(sqrt(data.s[,dir.name])~sqrt(data.s[,i])))
       abline(c(0,1),col="red")
       legend("topleft", legend=c("Bisector", "Regression line"),
@@ -97,7 +100,7 @@ bias <- function (data,dir,sae,scatterplot=FALSE)
     all.output<-list(all.output,output2=output2)
   }
   
-
+return(all.output)
                    
   
 }

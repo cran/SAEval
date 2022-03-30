@@ -5,13 +5,15 @@
 \code{bias} diagnostic allows to evaluate how the model-based estimates are closed to the unbiased direct estimates.
 }
 \usage{
-bias(data,dir,sae,scatterplot=FALSE)
+bias(data,dir,sae,scatterplot=FALSE,main=NULL)
 }
 \arguments{
 \item{data}{a data frame containing the direct estimates among with the small area estimates, e.g. \code{\link{SAEval_example}}.}
  \item{dir}{formula identifing the direct estimates.}
  \item{sae}{formula identifing the small area estimates.}
  \item{scatterplot}{logical scalar. Should the scatterplot of the estimates be produced (default=FALSE)?. See also 'Details'.}
+ \item{main}{optionally, if a string is set in \code{main} it will be used as the scatterplot main title. The defualt main title is the name of the direct
+ estimator versus the SAE names.}
  }
  
 \details{
