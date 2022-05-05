@@ -39,7 +39,7 @@ Pebesma E., et al.,2021, "sf: Simple Features for R", CRAN repository https://CR
 \examples{
 
 # Load example data and shape file
-data(SAEval_example);data(SAEval_example_shp)
+data(SAEval_example);data(sa_shp)
 
 SAEval_example$cv_d<-sqrt(SAEval_example$mse_d)/SAEval_example$y_d
 

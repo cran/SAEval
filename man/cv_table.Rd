@@ -5,11 +5,12 @@
 \code{cv_table} is used to analyse the coefficent of variation distribution of the chosen indicators.
 }
 \usage{
-cv_table(data,cv)
+cv_table(data,cv,boxplot=FALSE)
 }
 \arguments{
 \item{data}{a data frame containg the coefficient of variation for the direct and small area estimators}
- \item{cv}{formula identifing the coefficient of variation.}
+\item{cv}{formula identifing the coefficient of variation.}
+\item{boxplot}{logical scalar. Should the boxplot of the coefficient of variation be produced (default=FALSE)?.}
  }
  
 \details{

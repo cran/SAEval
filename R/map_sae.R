@@ -21,7 +21,7 @@ map_sae<-function(shapefile,data,area,indicators,breaks=FALSE,main=FALSE,output_
     
     if (length(indicators.name)>1)
     {
-  readline(prompt="Press [enter] to continue...")
+      readline(prompt="Press [enter] to continue...")
     }
     
   dev.new()

@@ -1,5 +1,5 @@
 
-cv_table <- function (data,cv)
+cv_table <- function (data,cv,boxplot=FALSE)
   
 {
   
@@ -23,6 +23,12 @@ cv_table <- function (data,cv)
   Merged[,1]<-c("0 - 0.165", "0.166 - 0.333", ">0.333")
   if (sum(Merged[,2])<sum(Merged[,3]))
   {Merged<-rbind(Merged,c("NA",sum(Merged[,3])-sum(Merged[,2]),rep(0,length(cv.name)-1)))
+  }
+  
+  if (boxplot!=FALSE)
+  {
+    dev.new()
+    boxplot(data.s)
   }
   all.output<-data.frame(Merged)
   

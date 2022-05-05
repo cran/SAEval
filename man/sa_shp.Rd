@@ -6,10 +6,10 @@
 Example dataset to map Small Area Estimates
 }
 \description{
-\code{SAEval_example_shp} contains a \code{sf} object to map the small area estimates.
+\code{sa_shp} contains a \code{sf} object to map the small area estimates.
 }
 \usage{
-data(SAEval_example_shp)
+data(sa_shp)
 }
 \format{
 \code{sa_shp} is a \code{sf} object with the shapefile for the \code{sa} domain.  
@@ -17,7 +17,7 @@ data(SAEval_example_shp)
 
 \examples{
 # Load example data
-data(SAEval_example_shp)
+data(sa_shp)
 
 summary(sa_shp)
 
