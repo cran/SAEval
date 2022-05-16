@@ -28,7 +28,7 @@ The small area with both direct estimate and variance of the direct estimates eq
 }
 
 \value{
-Object of class \code{data.frame}. The data frame contains information for the small area estimators (\code{methods}) and the number of SAE estimates included in the confident interval (\code{included}).
+Object of class \code{data.frame}. The data frame contains information for the small area estimators (\code{methods}) about the number of SAE estimates included in the confident interval (\code{included}) and the number of overlapping confident intervals (\code{overlap}).
 }
 \author{
 Developed by Andrea Fasulo
