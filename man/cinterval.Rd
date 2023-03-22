@@ -1,8 +1,8 @@
 \name{cinterval}
 \alias{cinterval}
-\title{Confident interval analysis}
+\title{Confidence interval analysis}
 \description{
-\code{cinterval} analize the SAE estimates with respect to the confident inteval of the direct estimate.
+\code{cinterval} analize the direct estimates with respect to the SAE confidence interval.
 }
 
 \usage{
@@ -15,20 +15,20 @@ cinterval(data,dir,sae,v.dir,mse.sae,level=0.95,plot=F)
  \item{sae}{formula identifing the small area estimates.}
  \item{v.dir}{formula identifing the direct estimates variance.}
  \item{mse.sae}{formula identifing the small area estimates mean squared error.}
- \item{level}{double number. The confidence level represents the proportion of correspondingly confedent inteval that end up containing the true value of the parameter (default=0.95).}
+ \item{level}{double number. The confidence level represents the proportion of correspondingly confidence inteval that end up containing the true value of the parameter (default=0.95).}
   \item{plot}{logical scalar. Should the plot be produced (default=FALSE)?. See also 'Details'.}
 }
 
 \details{
-This diagnostic measures for each SAE estimators the number of estimates that fall between the upper and lower bound of the direct estimates confidence intervals.
+This diagnostic measures (i) for each SAE estimators the number of direct estimates that fall between the upper and lower bound of the SAE estimates confidence interval and (ii) the number of overlapping confidence intervals.
 
-If \code{plot=TRUE} the SAE estimates are plotted with the direct estimates confindent interval to analyze the distributions.
+If \code{plot=TRUE} the direct estimates are plotted with the SAE confindence interval to analyze the distributions.
 
 The small area with both direct estimate and variance of the direct estimates equal to NA value are automatically removed from the data.
 }
 
 \value{
-Object of class \code{data.frame}. The data frame contains information for the small area estimators (\code{methods}) about the number of SAE estimates included in the confident interval (\code{included}) and the number of overlapping confident intervals (\code{overlap}).
+Object of class \code{data.frame}. The data frame contains information for the small area estimators (\code{methods}) about the number of direct estimates included in the SAE confidence interval (\code{included}) and the number of overlapping confidence intervals (\code{overlap}).
 }
 \author{
 Developed by Andrea Fasulo

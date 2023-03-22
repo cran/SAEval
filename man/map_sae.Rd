@@ -5,15 +5,22 @@
 \code{map_sae} produces geographical maps for the small area estimates or the direct estimaes among with their CVs.
 }
 \usage{
-map_sae(shapefile,data,area,indicators,breaks=FALSE,main=FALSE,output_data=FALSE)
-
+map_sae(shapefile,
+data,
+area,
+indicators,
+color=c("green","red"),
+breaks=FALSE,
+main=FALSE,
+output_data=FALSE)
 }
 \arguments{
 \item{shapefile}{object of class \code{sf} and \code{data.frame} as defined by the \code{sf} package containing shapefile informations, e.g. \code{\link{sa_shp}}. See also 'Details'.}
  \item{data}{data frame containing for the area of interest the information to be visualized,  e.g. \code{\link{SAEval_example}}.}
  \item{area}{formula identifing the area of interest.}
   \item{indicators}{formula identifing the variables to be visualized.}
-  \item{breaks}{list containing the end points for each indcator of interest (default=FALSE).}
+  \item{color}{a \code{vector} of 2 color defining the lowest and highest values in the plot}
+  \item{breaks}{list containing the endpoints for each indicator of interest (default=FALSE).}
   \item{main}{logical scalar. Should the maps include a main title (default=FALSE)?. See also 'Details'.}
   \item{output_data}{logical scalar. Should the funtion returns a data frame including the map data among with the indicators of interest (default=FALSE)?. See also 'Details'.}
  }
@@ -50,7 +57,7 @@ map_sae(shapefile=sa_shp,data=SAEval_example,area=~sa,indicators=~y_d+cv_d+y_syn
 
 # Using breaks
 map_sae(shapefile=sa_shp,data=SAEval_example,area=~sa,indicators=~y_d+cv_d+y_syna+cv_sa,
-        breaks=list(seq(0,31000,3000),seq(0,1.5,0.15),seq(0,31000,3000),seq(0,1.5,0.15)),main=TRUE)
+        breaks=list(seq(0,40000,5000),seq(0,1.5,0.15),seq(0,40000,5000),seq(0,1.5,0.15)),main=TRUE)
 }
 
 }

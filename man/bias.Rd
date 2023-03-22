@@ -21,7 +21,7 @@ bias(data,dir,sae,scatterplot=FALSE,main=NULL)
 
 The use of this diagnostic is straightforward when the focus of interest is on small area totals since unbiased direct estimators of such totals are typically available.
 
-If \code{scatterplot=TRUE} the SAE estimates (X-axis) are plotted on a cartesian plane against the direct estimates (Y-axis) to verify if there is a departure of the Y = X (red line) from the regression line between model based and direct estimates (black line).
+If \code{scatterplot=TRUE} the direct estimates (X-axis) are plotted on a cartesian plane against the SAE estimates (Y-axis) to verify if there is a departure of the Y = X (red line) from the regression line between model based and direct estimates (black line).
 
 The small area with direct estimate equal to NA value are automatically removed from the data.
 }
